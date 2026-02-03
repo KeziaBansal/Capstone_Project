@@ -2,39 +2,39 @@
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│                        USER INTERFACE                            │
-│                   React Dashboard (Port 3000)                    │
-│                                                                   │
-│  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐       │
-│  │  Stats   │  │ Defects  │  │  Charts  │  │  Table   │       │
-│  │  Cards   │  │   Pie    │  │   Line   │  │ Recent   │       │
-│  └──────────┘  └──────────┘  └──────────┘  └──────────┘       │
-│                                                                   │
-│             Auto-refresh every 5 seconds                         │
+│                        USER INTERFACE                           │
+│                   React Dashboard (Port 3000)                   │
+│                                                                 │
+│  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐         │
+│  │  Stats   │  │ Defects  │  │  Charts  │  │  Table   │         │
+│  │  Cards   │  │   Pie    │  │   Line   │  │ Recent   │         │
+│  └──────────┘  └──────────┘  └──────────┘  └──────────┘         │
+│                                                                 │
+│             Auto-refresh every 5 seconds                        │
 └───────────────────────────┬─────────────────────────────────────┘
                             │
                             │ HTTP GET Requests
                             │
 ┌───────────────────────────▼─────────────────────────────────────┐
-│                     API LAYER (FastAPI)                          │
-│                    Backend (Port 8000)                           │
-│                                                                   │
-│  ┌─────────────────────────────────────────────────────────┐   │
-│  │              Dashboard Endpoints (NEW)                   │   │
-│  │  • GET /api/stats                                        │   │
-│  │  • GET /api/recent-detections                           │   │
-│  │  • GET /api/defect-distribution                         │   │
-│  │  • GET /api/performance-metrics                         │   │
-│  └─────────────────────────────────────────────────────────┘   │
-│                                                                   │
-│  ┌─────────────────────────────────────────────────────────┐   │
-│  │         Prediction Endpoints (EXISTING)                  │   │
-│  │  • POST /predict (base64)                               │   │
-│  │  • POST /predict/file (multipart)                       │   │
-│  │  • POST /debug/predict                                  │   │
-│  │  • GET /health                                          │   │
-│  └─────────────────────────────────────────────────────────┘   │
-│                                                                   │
+│                     API LAYER (FastAPI)                         │
+│                    Backend (Port 8000)                          │
+│                                                                 │
+│  ┌─────────────────────────────────────────────────────────┐    │
+│  │              Dashboard Endpoints (NEW)                  │    │
+│  │  • GET /api/stats                                       │    │
+│  │  • GET /api/recent-detections                           │    │
+│  │  • GET /api/defect-distribution                         │    │
+│  │  • GET /api/performance-metrics                         │    │
+│  └─────────────────────────────────────────────────────────┘    │
+│                                                                 │
+│  ┌─────────────────────────────────────────────────────────┐    │
+│  │         Prediction Endpoints (EXISTING)                 │    │
+│  │  • POST /predict (base64)                               │    │
+│  │  • POST /predict/file (multipart)                       │    │
+│  │  • POST /debug/predict                                  │    │
+│  │  • GET /health                                          │    │
+│  └─────────────────────────────────────────────────────────┘    │
+│                                                                 │
 └───────────────────────────┬─────────────────────────────────────┘
                             │
                             │ Read/Write Operations
@@ -127,3 +127,4 @@ KEY FEATURES:
 ✓ Scalable architecture
 ✓ Error handling at each layer
 ✓ CORS enabled for cross-origin requests
+

@@ -39,33 +39,33 @@
                             │
                             │ Read/Write Operations
                             │
-┌───────────────────────────▼─────────────────────────────────────┐
-│                      DATA STORAGE                                │
-│                                                                   │
+┌───────────────────────────▼────────────────────────────────────┐
+│                      DATA STORAGE                              │
+│                                                                │
 │  ┌─────────────────────────────────────────────────────────┐   │
-│  │         logs/predictions_YYYY-MM-DD.json                 │   │
-│  │  {                                                       │   │
+│  │         logs/predictions_YYYY-MM-DD.json                │   │
+│  │  {                                                      │   │
 │  │    "timestamp": "2025-12-18T10:30:00",                  │   │
 │  │    "traditional_result": {...},                         │   │
 │  │    "few_shot_result": {...},                            │   │
 │  │    "processing_time": 0.142,                            │   │
 │  │    "success": true                                      │   │
-│  │  }                                                       │   │
+│  │  }                                                      │   │
 │  └─────────────────────────────────────────────────────────┘   │
-│                                                                   │
-└─────────────────────────────────────────────────────────────────┘
+│                                                                │
+└────────────────────────────────────────────────────────────────┘
 
 
 ┌─────────────────────────────────────────────────────────────────┐
-│                      ML MODEL LAYER                              │
-│                                                                   │
-│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐         │
-│  │  YOLO Model  │  │  Traditional │  │   Few-Shot   │         │
-│  │   (Masking)  │  │  Classifier  │  │  Prototypical│         │
-│  │              │  │  (MobileNet/ │  │   Network    │         │
-│  │  weights.pt  │  │   ResNet18)  │  │              │         │
-│  └──────────────┘  └──────────────┘  └──────────────┘         │
-│                                                                   │
+│                      ML MODEL LAYER                             │
+│                                                                 │
+│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐           │
+│  │  YOLO Model  │  │  Traditional │  │   Few-Shot   │           │
+│  │   (Masking)  │  │  Classifier  │  │  Prototypical│           │
+│  │              │  │  (MobileNet/ │  │   Network    │           │
+│  │  weights.pt  │  │   ResNet18)  │  │              │           │
+│  └──────────────┘  └──────────────┘  └──────────────┘           │
+│                                                                 │
 └─────────────────────────────────────────────────────────────────┘
 
 
@@ -94,7 +94,7 @@ INTEGRATION POINTS:
 
 Frontend (React) ←→ Backend (FastAPI)
      │                      │
-     │   HTTP GET /api/*   │
+     │   HTTP GET /api/*    │
      │─────────────────────→│
      │                      │
      │    JSON Response     │
@@ -127,4 +127,5 @@ KEY FEATURES:
 ✓ Scalable architecture
 ✓ Error handling at each layer
 ✓ CORS enabled for cross-origin requests
+
 
